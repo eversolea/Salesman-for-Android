@@ -47,9 +47,6 @@ public class NewHouseActivity extends AppCompatActivity {
                 String text2 = textbox2.getText().toString();
                 String text3 = textbox3.getText().toString();
 
-                //House newHouse = new House(textbox1.getText(),textbox2.getText(),textbox3.getText());
-                //ourList.add(newHouse);
-
                 finish();
             }
         });
