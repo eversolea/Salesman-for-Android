@@ -1,4 +1,4 @@
-package test.thelist;//package com.example.john.door_smart;
+package test.thelist;
 
 import java.io.*;
 import java.util.*;
