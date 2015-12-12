@@ -8,9 +8,10 @@ public class Address {
 	private int houseNumber;
 	private String streetName;
 
-	public Address(int myHouseNumber, String myStreetName) {
-		houseNumber = myHouseNumber;
-		streetName = myStreetName;
+	public Address(String myAddress) {
+		String[] part = myAddress.split("(?<=\\d)(?=\\D)");
+		houseNumber = Integer.parseInt(part[0]);
+		streetName = part[1];
 	}
 
 	public int getHouseNumber() {

@@ -16,14 +16,14 @@ public class House {
 
      // public House(double x, double y, int myResponse, String myComment, String myAddress, Date myDate)
      // public House(LatLng myCoord, int myResponse, String myComment, String myAddress, Date myDate)
-	 public House(String myName, int myResponse, String myComment, Address myAddress, Date myDate) {
+	 public House(String myName, int myResponse, String myComment, String myAddress, Date myDate) {
 	 	// xCoord = x;
 	 	// yCoord = y;
 	 	//coord = myCoord;
 	 	name = myName;
 	 	response = myResponse;
 	 	comment = myComment;
-	 	address = myAddress;
+	 	address = new Address(myAddress);
 	 	date = myDate;
 	 }
 
@@ -110,7 +110,7 @@ public class House {
 	 			break;
 	 	}
 
-	 	System.out.println("Address: " + address.getHouseNumber() + " " + address.getStreetName());
+	 	System.out.println("Address: " + address.getHouseNumber() + " " + address.getStreetName().trim());
 	 	System.out.println("Date added: " + date);
 	 	System.out.println("Comment: " + comment);
 	 }

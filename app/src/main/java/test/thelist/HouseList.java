@@ -3,7 +3,7 @@ package test.thelist;//package com.example.john.door_smart;
 import java.io.*;
 import java.util.*;
 
-import test.thelist.House;
+//import test.thelist.House;
 
 public class HouseList {
 	private ArrayList<House> houses;
