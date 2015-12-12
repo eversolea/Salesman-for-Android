@@ -12,16 +12,6 @@
     tools:context="test.thelist.MainActivity"
     tools:showIn="@layout/activity_main">
 
-    <GridView
-        android:layout_width="wrap_content"
-        android:layout_height="350dp"
-        android:id="@+id/gridView"
-        android:longClickable="true"
-        android:nestedScrollingEnabled="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="41dp" />
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -44,4 +34,12 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:onClick="setContentView" />
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/listView"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/button3" />
 </RelativeLayout>

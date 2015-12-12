@@ -12,101 +12,84 @@
     tools:context="test.thelist.NewHouseActivity"
     tools:showIn="@layout/activity_new_house">
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/editText"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginEnd="89dp"
-        android:layout_marginTop="87dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Household"
-        android:id="@+id/textView2"
-        android:layout_alignTop="@+id/editText"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="51dp"
-        android:layout_alignBottom="@+id/editText" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Address"
-        android:id="@+id/textView3"
-        android:layout_marginTop="40dp"
-        android:layout_below="@+id/textView2"
-        android:layout_alignStart="@+id/textView2" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/editText2"
-        android:layout_alignBottom="@+id/textView3"
-        android:layout_alignStart="@+id/editText" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/editText3"
-        android:layout_marginTop="33dp"
-        android:layout_below="@+id/editText2"
-        android:layout_alignStart="@+id/editText2" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Comment"
-        android:id="@+id/textView4"
-        android:layout_alignBottom="@+id/editText3"
-        android:layout_alignStart="@+id/textView3" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Response"
-        android:id="@+id/textView5"
-        android:layout_below="@+id/textView4"
-        android:layout_alignStart="@+id/textView4"
-        android:layout_marginTop="39dp" />
-
     <RadioButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Green"
         android:id="@+id/radioButton"
-        android:layout_alignTop="@+id/textView5"
-        android:layout_alignParentEnd="true"
-        android:layout_marginEnd="29dp"
-        android:checked="false" />
+        android:checked="true"
+        android:layout_above="@+id/button"
+        android:layout_toEndOf="@+id/button"
+        android:layout_marginStart="28dp" />
 
     <RadioButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Yellow"
         android:id="@+id/radioButton2"
-        android:layout_below="@+id/radioButton"
-        android:layout_alignStart="@+id/radioButton"
-        android:checked="false" />
+        android:checked="false"
+        android:layout_below="@+id/editText3"
+        android:layout_alignStart="@+id/button"
+        android:layout_marginTop="87dp" />
 
     <RadioButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Red"
         android:id="@+id/radioButton3"
-        android:layout_below="@+id/radioButton2"
-        android:layout_alignStart="@+id/radioButton2"
-        android:checked="false" />
+        android:checked="false"
+        android:layout_alignTop="@+id/radioButton2"
+        android:layout_toStartOf="@+id/editText2" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Submit me!"
         android:id="@+id/button"
-        android:layout_below="@+id/radioButton3"
-        android:layout_toEndOf="@+id/textView5"
-        android:layout_marginTop="27dp" />
+        android:layout_marginTop="54dp"
+        android:layout_below="@+id/radioButton2"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPostalAddress"
+        android:ems="10"
+        android:id="@+id/editText"
+        android:text="Address"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:ems="10"
+        android:id="@+id/editText2"
+        android:layout_marginTop="33dp"
+        android:layout_below="@+id/editText"
+        android:layout_alignStart="@+id/editText" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:ems="10"
+        android:id="@+id/editText3"
+        android:layout_below="@+id/editText2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="33dp"
+        android:text="Comment" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Response"
+        android:id="@+id/textView2"
+        android:textSize="20dp"
+        android:layout_below="@+id/editText3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp" />
 
 </RelativeLayout>
