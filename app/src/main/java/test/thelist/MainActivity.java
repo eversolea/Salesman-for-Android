@@ -1,16 +1,20 @@
 package test.thelist;
 
-import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ListView;
+
+import java.util.Date;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -35,7 +39,10 @@ public class MainActivity extends AppCompatActivity {
         myButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, NewHouseActivity.class));
+                Intent i = new Intent(v.getContext(), NewHouseActivity.class);
+                startActivityForResult(i, 1);
+
+                //startActivity(new Intent(MainActivity.this, NewHouseActivity.class));
             }
         });
     }
@@ -46,9 +53,6 @@ public class MainActivity extends AppCompatActivity {
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
-
-
-
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -63,5 +67,22 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    final HouseList hl1 = new HouseList();
+
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == 1) {
+            if(resultCode == RESULT_OK){
+                String listString1 = data.getStringExtra("edittextvalue");
+                String listString2 = data.getStringExtra("edittextvalue2");
+                String listString3 = data.getStringExtra("edittextvalue3");
+
+                House house1 = new House(listString1, 1, listString2, listString3, new Date());
+                hl1.addHouse(house1);
+
+            }
+        }
     }
 }

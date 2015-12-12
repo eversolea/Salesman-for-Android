@@ -1,6 +1,8 @@
 package test.thelist;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -9,10 +11,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ListView;
-import android.widget.TextView;
-
-import java.util.List;
+import java.util.Date;
 
 public class NewHouseActivity extends AppCompatActivity {
 
@@ -41,11 +40,16 @@ public class NewHouseActivity extends AppCompatActivity {
                 final EditText textbox1 = (EditText) findViewById(R.id.editText);
                 final EditText textbox2 = (EditText) findViewById(R.id.editText2);
                 final EditText textbox3 = (EditText) findViewById(R.id.editText3);
-//                final ListView ourList = (ListView) findViewById(R.id.listView);
 
                 String text1 = textbox1.getText().toString();
                 String text2 = textbox2.getText().toString();
                 String text3 = textbox3.getText().toString();
+
+                Intent formResult = new Intent();
+                formResult.putExtra("edittextvalue", text1);
+                formResult.putExtra("edittextvalue2",text2);
+                formResult.putExtra("edittextvalue3",text3);
+                setResult(RESULT_OK, formResult);
 
                 finish();
             }
